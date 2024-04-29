@@ -1,0 +1,28 @@
+package com.financial.tracker.entity;
+
+public enum Category {
+    SALARY,
+    FOOD,
+    GROCERY,
+    SUBSCRIPTION,
+    RENT_MORTGAGE,
+    UTILITIES,
+    TRANSPORTATION,
+    ENTERTAINMENT,
+    HEALTH_MEDICAL,
+    CLOTHING,
+    EDUCATION,
+    TRAVEL,
+    GIFTS_DONATIONS,
+    INSURANCE,
+    SAVINGS,
+    INVESTMENTS,
+    TAXES,
+    PET_EXPENSES,
+    HOME_MAINTENANCE,
+    CHILDCARE,
+    HOBBIES,
+    PERSONAL_CARE,
+    ELECTRONICS,
+    MISCELLANEOUS
+}

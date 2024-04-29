@@ -12,4 +12,5 @@ public class Transaction {
     private String transactionAmount;
     private TransactionType transactionType;
     private Category category;
+    private String note;
 }
