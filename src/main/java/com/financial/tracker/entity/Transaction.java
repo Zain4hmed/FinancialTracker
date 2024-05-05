@@ -1,10 +1,13 @@
 package com.financial.tracker.entity;
 
+
+import java.io.Serializable;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-public class Transaction {
+public class Transaction implements Serializable{
     @Id
     private String transactionId;
     private String senderUserId;

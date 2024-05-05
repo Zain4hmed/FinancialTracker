@@ -1,7 +1,10 @@
 package com.financial.tracker.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 import lombok.*;
 
 import java.util.List;
@@ -12,7 +15,8 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-public class UserEntity {
+@Table
+public class User {
 
     @Id
     private String userId;
@@ -22,6 +26,7 @@ public class UserEntity {
     private String userName;
     private String password;
     private String currentBalance;
+    @OneToMany(targetEntity=Transaction.class,fetch=FetchType.EAGER)
     private List<Transaction> transactions;
 
 }
