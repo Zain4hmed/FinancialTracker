@@ -1,6 +1,6 @@
 package com.financial.tracker.controller;
 
-import com.financial.tracker.entity.UserEntity;
+import com.financial.tracker.entity.User;
 import com.financial.tracker.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,12 +15,12 @@ public class UserController {
     private UserService userService;
 
     @PostMapping
-    public UserEntity createEntity(@RequestBody UserEntity user) {
+    public User createUser(@RequestBody User user) {
         return userService.saveUser(user);
     }
 
     @GetMapping
-    public List<UserEntity> getAllEntities() {
+    public List<User> getAllEntities() {
         return userService.getAllUsers();
     }
 
