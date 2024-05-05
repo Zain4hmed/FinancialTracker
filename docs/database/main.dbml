@@ -12,7 +12,7 @@ Table cashflow_categories {
 Table users {
     id integer [pk]
     name text
-    hash_password text
+    password_hash text
     created integer
     updated integer
 }
