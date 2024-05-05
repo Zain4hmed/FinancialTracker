@@ -1,0 +1,46 @@
+// Open in https://dbdiagram.io to see diagram
+
+// Static data
+
+Table cashflow_categories {
+    id integer [pk]
+    name text
+}
+
+// Dynamic data
+
+Table users {
+    id integer [pk]
+    name text
+    hash_password text
+    created integer
+    updated integer
+}
+
+Table accounts {
+    id integer [pk]
+    user_id integer
+    balance integer
+    created integer
+    updated integer
+}
+
+Table cashflows {
+    account_id integer
+    id integer
+    category_id integer
+    type text [note: 'Debit or Credit (D or C)']
+    amount real
+    created integer
+    updated integer
+
+    indexes {
+        (account_id, id) [pk]
+    }
+}
+
+Ref: accounts.user_id > users.id
+
+Ref: cashflows.account_id > accounts.id
+
+Ref: cashflows.category_id > cashflow_categories.id
