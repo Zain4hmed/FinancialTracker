@@ -1,0 +1,3 @@
+- Cashflow categories include lending and borrowing
+- REST API based
+- Common database for all developers
